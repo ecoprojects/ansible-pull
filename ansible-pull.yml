@@ -17,7 +17,7 @@
       template: src=templates/httpd.conf dest=/etc/httpd/conf/httpd.conf
 
     - name: httpd starts on reboot
-      shell: chkconfig nfs on
+      shell: chkconfig httpd on
 
     - name: restart httpd
       service: name=httpd state=started enabled=yes
