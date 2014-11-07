@@ -19,6 +19,9 @@
     - name: httpd starts on reboot
       shell: chkconfig httpd on
 
+    - name: Create domain directory and NFS directory
+      shell: mkdir -p /var/www/vhosts/{{ domain_name }}/media
+
     - name: restart httpd
       service: name=httpd state=started enabled=yes
 
@@ -59,9 +62,6 @@
 
     - name: NFS starts on reboot
       shell: chkconfig nfs on
-
-    - name: Create domain directory and NFS directory
-      shell: mkdir -p /var/www/vhosts/{{ domain_name }}/media
 
     - name: Move website into place
       copy: src=index.html dest=/var/www/vhosts/{{ domain_name }}/
