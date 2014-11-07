@@ -1,5 +1,6 @@
 ---
 - name: Web Server Configuration
+  hosts: localhost
   connection: local
   gather_facts: False
   tasks:
@@ -61,7 +62,7 @@
       shell: chkconfig nfs on
 
     - name: Move website into place
-      copy: src=index.html dest=/var/www/vhosts/{{ domain_name }}/
+      copy: src=files/index.html dest=/var/www/vhosts/{{ domain_name }}/
 
   handlers:
     - include: handlers/main.yml
