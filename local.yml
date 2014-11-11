@@ -64,5 +64,11 @@
     - name: Move website into place
       copy: src=files/index.html dest=/var/www/vhosts/{{ domain_name }}/
 
+    - name: Stop iptables
+      shell: service iptables stop
+
+    - name: restart httpd
+      shell: service httpd restart
+
   handlers:
     - include: handlers/main.yml
