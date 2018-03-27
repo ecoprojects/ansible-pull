@@ -3,7 +3,7 @@
 
 ## usage: ansible-playbook -i <inventory file> myplaybook.yml
 
- - hosts: all
+ - hosts: localhost
   vars:
     wp_version: 4.0
     wp_install_dir: '/var/sites/awesome_wordpress_site'
