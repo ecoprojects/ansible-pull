@@ -3,9 +3,10 @@ Work to be done
 
 1. Create server that will install ansible and git
 2. Create autoscale policies that will create servers that will instal ansible and git
+3. Writing an example
 
 Completed
-_________
+________
 
 Done
 
