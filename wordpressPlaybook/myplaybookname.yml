@@ -3,11 +3,14 @@
 
 ## usage: ansible-playbook -i <inventory file> myplaybook.yml
 
-# - hosts: production1
-#  roles:
-#    - roleA
-#    - roleB
-#  tasks:
-#    - name: taskA
-#      file: path=~/helloworld.txt state=touch
+ - hosts: all
+  vars:
+    wp_version: 4.0
+    wp_install_dir: '/var/sites/awesome_wordpress_site'
+    wp_db_name: 'database'
+    wp_db_user: 'username'
+    wp_db_password: 'password'
+    wp_db_host: 'localhost'
+  roles:
+  - darthwade.wordpress
     
