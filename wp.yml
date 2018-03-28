@@ -14,4 +14,8 @@ runcmd:
 - mkdir /var/log/ansible/ansible.log
 - echo -e "[localhost]\n127.0.0.1 ansible_connection=local" >> /etc/ansible/hosts
 #:- ssh-keyscan github.com >> /etc/ssh/ssh_known_hosts
+<<<<<<< HEAD
 - ansible-pull -d /etc/ansible/ansible-pull -U https://github.com/shterrel/ansible-pull.git ansible-examples/wordpress-nginx_rhel7/site.yml
+=======
+- ansible-pull -d /etc/ansible/ -U https://github.com/shterrel/ansible-pull.git ansible-examples/wordpress-nginx_rhel7/site.yml
+>>>>>>> c7b9b0169c85e3f63e8443a3e2654e796ac3fbb1
