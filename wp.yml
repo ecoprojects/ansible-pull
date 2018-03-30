@@ -9,11 +9,15 @@ packages:
 
 runcmd:
 
+- vim /etc/ansible
 - yum update -y
 - pip install --upgrade pip
 - systemctl start redis
 - mkdir /var/log/ansible
 - chmod 775 /var/log/ansible
 - echo -e "[localhost]\n127.0.0.1 ansible_connection=local" >> /etc/ansible/hosts
+- echo -e "[default]\n1inventory = inventory" >> /etc/ansible/hosts
 #:- ssh-keyscan github.com >> /etc/ssh/ssh_known_hosts
 - ansible-pull -d /etc/ansible/ansible-pull -U https://github.com/shterrel/ansible-pull.git /etc/ansible/ansible-pull/ansible-examples/wordpress-nginx_rhel7/site.yml
+
+final_message: "The system is finally up, after $UPTIME seconds"
