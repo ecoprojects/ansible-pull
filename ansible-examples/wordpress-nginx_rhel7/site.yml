@@ -1,7 +1,7 @@
 ---
 - name: Install WordPress, MariaDB, Nginx, and PHP-FPM
-  connection: 127.0.0.1
-  connection: local 
+  hosts: 127.0.0.1
+  connection: local
   gather_facts: false
 
   roles:
