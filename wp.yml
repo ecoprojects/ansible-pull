@@ -13,6 +13,7 @@ runcmd:
 - pip install --upgrade pip
 - pip install redis
 - systemctl start redis
+- systemctl restart nginx
 - mkdir /var/log/ansible
 - chmod 775 /var/log/ansible
 - echo -e "[localhost]\n127.0.0.1 ansible_connection=local" >> /etc/ansible/hosts
