@@ -12,6 +12,7 @@ runcmd:
 - vim /etc/ansible
 - yum update -y
 - pip install --upgrade pip
+- pip install redis
 - systemctl start redis
 - mkdir /var/log/ansible
 - chmod 775 /var/log/ansible
