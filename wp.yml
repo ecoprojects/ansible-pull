@@ -7,10 +7,6 @@ packages:
 - python-pip
 - redis
 
-ssh_keys:
-
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNgiMqmJo7XGJtwIyJ/BdSMUpnjM4ZHSBiEx+YRpNkyqy7i53v8JAY0dkIT6H+yDghC39UG1Ok8GPqmPz2UrfmZyaegAsXMsZDwKPAutN68Q0/tUp0TZjnv0bfG+FkcKpGCZcOkRYszBd0n54ozMtFKtf7kBnBWXAbfJ2GH8PXiDuMHBfrUbLOv8cUbtGiVIHNjIbJ1RPff18uUhbApMc0eg/vqxRy1juxTcHVbOjG+7L/nbpRJqFSe2TZTChNrnJcLrG8dEex2wkMRZzKpAEOHQQCqMTeR+7asP28C3CSL5weplEHacebQQKUNjFCze73lupwPjWM/bDIVM0aozeN davi5652@Davids-MacBook-Pro.local
-
 runcmd:
 
 - yum update -y
